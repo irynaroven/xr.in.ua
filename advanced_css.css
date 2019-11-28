@@ -1,0 +1,47 @@
+body{
+	background: url("images/sea.jpg") repeat-x;
+	font-size: 90%;
+}
+#header table{
+	padding-bottom: 15 px;
+	border-bottom: 2px solid #fff;
+}
+#logo img {
+	width: 300px;
+}
+#text-logo {
+	text-align: center;
+	width: 100%;
+}
+#content p:first-letter {
+	color: purple;
+	font-size: 200%;
+}
+#left {
+	float: left;
+	width: 200px;
+	border-right: 1px solid #fff;
+}
+#left li{
+	list-style: none;
+	padding-left: 10px;
+}
+#left ul{
+	margin-top: 5px;
+	margin-left: 10px;
+}
+#left h2{
+   margin-left: 20px;
+}
+#left a:link, #left a:visited {
+	color: white;
+}
+#right {
+	margin-left: 200px;
+	border-left: 1px solid #fff;
+	padding-left: 20px;
+}
+#footer p{
+	text-align: center;
+	border-top:2px solid #fff;
+}
