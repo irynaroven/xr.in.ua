@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset=utf-8" />
+	<title>My game</title>
+</head>
+<body>
+<h1>My game</h1>
+		<script>
+  var words = ["Ира","Лешик","Лилок","Маша"];
+  var word = words[Math.floor(Math.random() * words.length)];
+		
+  var answerArray = [];
+  for (var i =0; i<word.length; i++){
+  answerArray[i] = "_";
+  }		
+  var remainingLetters = word.length;
+  var guesses= 10;
+
+  while (remainingLetters>0 && guesses >0) {
+		alert(answerArray.join(" "));
+
+	var guess = prompt("Guess or cancel")
+	;
+	if (guess===null){
+		break;
+	}
+      else if (guess.length !==1){
+		alert("Please type one letter");
+	} else {
+	  guesses--;
+	  guess = guess.toLowerCase();
+	for (var j=0; j<word.length; j++){
+	  if (word[j]===guess && answerArray[j]==="_"){	
+		answerArray[j]=guess;
+		remainingLetters--;
+	  }
+	}
+  }
+  }
+	alert (answerArray.join(" "));
+	alert ("Awesome! You guessed "+word);
+</script>
+</body>
+</html>
